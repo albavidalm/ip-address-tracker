@@ -1,0 +1,36 @@
+.header {
+  background-image: url(../../assets/images/pattern-bg.png);
+  background-repeat: no-repeat;
+  height: 45vh;
+  width: 100%;
+  &__title {
+    color: rgb(255, 255, 255);
+    font-family: "Rubik", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 1.8rem;
+  }
+  &__input {
+    font-size: 0.9rem;
+    width: 90vw;
+    height: 3.2rem;
+    border-radius: 15px;
+    border-style: none;
+    position: absolute;
+    padding-left: 1.3rem;
+
+    &--button {
+      background-color: #000;
+      border-radius: 0 15px 15px 0;
+      border-style: none;
+      height: 3.2rem;
+      position: relative;
+      right: -17.9rem;
+      width: 3.2rem;
+      &-arrow {
+        color: rgb(255, 255, 255);
+      }
+    }
+  }
+}
