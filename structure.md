@@ -38,19 +38,21 @@ If the user enters a value in the input:
 
 ## 📝 Steps
 
-1. Create Header with the search engine input
-2. Clean API data
-3. Search for user's IP
-4. Display cleanData by console.log
-5. Once checked cleanData is correct launch getApiData at the very first of the App
-6. Relate the value of the user's input to the API (getApiData)
-7. If user submits an IP show the input value data
-8. Create getApiMap
-9. Show map
-10. Create data box
-11. Show cleanData in the box
-12. Working with CSS
-13. Can I refactor?
-14. Can I atomise?
+1. How do APIs work?
+2. Create Header with the search engine input
+3. Clean API data
+4. Search for user's IP
+5. Display cleanData by console.log
+6. Once checked cleanData is correct launch getApiData at the very first of the App
+7. Relate the value of the user's input to the API (getApiData)
+8. If user submits an IP show the input value data
+9. Create getApiMap
+10. Show map
+11. Create data box
+12. Show cleanData in the box
+13. Working with CSS (mobile first)
+14. Clean code
+15. Can I refactor?
+16. Can I atomise?
 
 ---

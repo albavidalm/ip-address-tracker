@@ -8,9 +8,9 @@ const Header = () => {
         id="searchIp"
         className="header__input"
       ></input>
-      <button className="header__input--button">
+      {/* <button className="header__input--button">
         <i className="fas fa-angle-right header__input--button-arrow"></i>
-      </button>
+      </button> */}
     </header>
   );
 };
