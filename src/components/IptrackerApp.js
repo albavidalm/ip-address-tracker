@@ -5,6 +5,7 @@ import getApiData from "./services/getApiData";
 
 const IptrackerApp = () => {
   getApiData();
+
   return (
     <>
       <Header />
