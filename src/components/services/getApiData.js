@@ -1,18 +1,19 @@
 const getApiData = () => {
   return fetch(
-    "https://geo.ipify.org/api/v2/country,city?at_mD3lwd9jqQ02Iiodbwo7hswGVeZck=at_mD3lwd9jqQ02Iiodbwo7hswGVeZck&ipAddress=8.8.8.8"
+    "https://geo.ipify.org/api/v2/country,city?apiKey=at_mD3lwd9jqQ02Iiodbwo7hswGVeZck&ipAddress=8.8.8.8"
   )
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
-      const cleanData = data.map((infoIp) => {
-        return {
-          ipAddres: infoIp.ip,
-          location: `${infoIp.location.city} , ${infoIp.location.postalcode}`,
-          timezone: infoIp.location.timezone,
-          isp: infoIp.isp,
-        };
-      });
+      const cleanData = {
+        ipAddres: data.ip,
+        location: `${data.location.city}, ${
+          data.location.postalcode || "Unknown PC"
+        } `,
+        timezone: data.location.timezone,
+        lat: data.location.lat,
+        lng: data.location.lng,
+        isp: data.isp,
+      };
       return cleanData;
     })
     .catch((err) => console.error(err));
