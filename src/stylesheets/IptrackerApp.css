@@ -378,7 +378,7 @@ template {
 .header {
   background-image: url(../../assets/images/pattern-bg.png);
   background-repeat: no-repeat;
-  height: 45vh;
+  height: 35vh;
   width: 100%;
 }
 
@@ -414,4 +414,9 @@ template {
 .header__input--button-arrow {
   color: white;
 }
-/*# sourceMappingURL=Iptracker.css.map */
+
+.leafleft-container {
+  width: 100vw;
+  height: 100vh;
+}
+/*# sourceMappingURL=IptrackerApp.css.map */
