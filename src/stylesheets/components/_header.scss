@@ -17,20 +17,20 @@
     height: 3.2rem;
     border-radius: 15px;
     border-style: none;
-    position: absolute;
+    // position: absolute;
     padding-left: 1.3rem;
 
-    &--button {
-      background-color: #000;
-      border-radius: 0 15px 15px 0;
-      border-style: none;
-      height: 3.2rem;
-      position: relative;
-      right: -17.9rem;
-      width: 3.2rem;
-      &-arrow {
-        color: rgb(255, 255, 255);
-      }
-    }
+    // &--button {
+    //   background-color: #000;
+    //   border-radius: 0 15px 15px 0;
+    //   border-style: none;
+    //   height: 3.2rem;
+    //   position: relative;
+    //   right: -17.9rem;
+    //   width: 3.2rem;
+    //   &-arrow {
+    //     color: rgb(255, 255, 255);
+    //   }
+    // }
   }
 }

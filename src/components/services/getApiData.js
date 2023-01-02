@@ -1,22 +1,32 @@
-const getApiData = () => {
+const getApiData = (inputValue) => {
+  const checkIpAddress =
+    /^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$/gi;
+  const checkDomain =
+    /^[a-zA-Z0-9][a-zA-Z0-9-]{1,61}[a-zA-Z0-9](?:\.[a-zA-Z]{2,})+/;
   return fetch(
-    "https://geo.ipify.org/api/v2/country,city?apiKey=at_mD3lwd9jqQ02Iiodbwo7hswGVeZck&ipAddress=8.8.8.8"
+    `https://geo.ipify.org/api/v2/country,city?apiKey=at_rW1s8LgC1goJAQLuoJUTM7xBlMy8U&${
+      checkIpAddress.test(inputValue)
+        ? `ipAddress=${inputValue}`
+        : checkDomain.test(inputValue)
+        ? `domain=${inputValue}`
+        : ""
+    }`
   )
     .then((response) => response.json())
     .then((data) => {
       const cleanData = {
-        ipAddres: data.ip,
-        location: `${data.location.city}, ${
+        ipAddress: data.ip || "Unknown IP",
+        location: `${data.location.city || "Unknown city"} , ${
           data.location.postalcode || "Unknown PC"
         } `,
-        timezone: data.location.timezone,
-        lat: data.location.lat,
-        lng: data.location.lng,
-        isp: data.isp,
+        timezone: data.location.timezone || "Unknown timezone",
+        lat: data.location.lat || "Unknown lat",
+        lng: data.location.lng || "Unknown lng",
+        isp: data.isp || "Unknown isp",
       };
       return cleanData;
     })
     .catch((err) => console.error(err));
 };
-
+// https://geo.ipify.org/api/v2/country,city?apiKey=at_rW1s8LgC1goJAQLuoJUTM7xBlMy8U&ipAddress=8.8.8.8
 export default getApiData;
