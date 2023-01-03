@@ -12,19 +12,12 @@ const IptrackerApp = () => {
     getApiData(localIp).then((response) => {
       setIpData(response);
     });
+    // eslint-disable-next-line
   }, []);
 
-  useEffect(() => {
-    getApiData(inputValue).then((response) => {
-      setIpData(response);
-    });
-  }, [inputValue]);
-
   const getIp = async () => {
-    // Connect ipapi.co with fetch()
     const response = await fetch("https://ipapi.co/json/");
     const data = await response.json();
-    // Set the IP address to the constant `ip`
     setlocalIp(data.ip);
     console.log(data.ip);
   };
@@ -32,10 +25,12 @@ const IptrackerApp = () => {
   const handleSubmit = (ev) => {
     ev.preventDefault();
     console.log(inputValue);
+    getApiData(inputValue).then((response) => {
+      setIpData(response);
+    });
   };
 
   const handleInputValue = (ev) => {
-    ev.preventDefault();
     setInputValue(ev.target.value);
   };
   return (
@@ -43,17 +38,18 @@ const IptrackerApp = () => {
       <form onSubmit={handleSubmit}>
         <input
           name="inputValue"
-          type="inputValue"
+          type="search"
           placeholder="Search for any IP address or domain"
           id="inputValue"
           className="header__input"
           onChange={handleInputValue}
-          //value={inputValue}
+          value={inputValue}
         />
         <input type="submit" value="Send" />
       </form>
       <ul>
         <li>{inputValue}</li>
+
         <li>location: {ipData.location}</li>
         <li>Your IP address is {localIp}</li>
       </ul>
