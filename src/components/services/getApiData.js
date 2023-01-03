@@ -1,14 +1,15 @@
-const getApiData = (inputValue) => {
+const getApiData = (inputValue, localIp) => {
   const checkIpAddress =
     /^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$/gi;
   const checkDomain =
     /^[a-zA-Z0-9][a-zA-Z0-9-]{1,61}[a-zA-Z0-9](?:\.[a-zA-Z]{2,})+/;
+
   return fetch(
     `https://geo.ipify.org/api/v2/country,city?apiKey=at_rW1s8LgC1goJAQLuoJUTM7xBlMy8U&${
-      checkIpAddress.test(inputValue)
-        ? `ipAddress=${inputValue}`
-        : checkDomain.test(inputValue)
-        ? `domain=${inputValue}`
+      checkIpAddress.test(inputValue || localIp)
+        ? `ipAddress=${inputValue || localIp}`
+        : checkDomain.test(inputValue || localIp)
+        ? `domain=${inputValue || localIp}`
         : ""
     }`
   )

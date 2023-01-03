@@ -8,10 +8,12 @@ const IptrackerApp = () => {
   const [localIp, setlocalIp] = useState();
 
   useEffect(() => {
-    getIp();
-    getApiData(localIp).then((response) => {
-      setIpData(response);
-    });
+    if (localIp === undefined) {
+      getIp();
+      getApiData(localIp).then((response) => {
+        setIpData(response);
+      });
+    }
     // eslint-disable-next-line
   }, []);
 
@@ -19,12 +21,10 @@ const IptrackerApp = () => {
     const response = await fetch("https://ipapi.co/json/");
     const data = await response.json();
     setlocalIp(data.ip);
-    console.log(data.ip);
   };
 
   const handleSubmit = (ev) => {
     ev.preventDefault();
-    console.log(inputValue);
     getApiData(inputValue).then((response) => {
       setIpData(response);
     });
@@ -48,12 +48,18 @@ const IptrackerApp = () => {
         <input type="submit" value="Send" />
       </form>
       <ul>
-        <li>{inputValue}</li>
-
+        <li>{ipData.ipAddress}</li>
         <li>location: {ipData.location}</li>
-        <li>Your IP address is {localIp}</li>
+        <li>lat: {ipData.lat}</li>
+        <li>lng: {ipData.lng}</li>
       </ul>
-      <Mapview />
+      {ipData.lat !== undefined && (
+        <Mapview
+          position={[ipData.lat, ipData.lng]}
+          lat={ipData.lat}
+          lng={ipData.lng}
+        />
+      )}
     </>
   );
 };
