@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import getApiData from "./services/getApiData";
 import Header from "./Header";
 import Mapview from "./Mapview";
+import InfoBox from "./InfoBox";
 
 const IptrackerApp = () => {
   const [inputValue, setInputValue] = useState("");
@@ -41,15 +42,8 @@ const IptrackerApp = () => {
         handleInputValue={handleInputValue}
         inputValue={inputValue}
       />
+      <InfoBox ipData={ipData} />
 
-      <ul>
-        <li>IP ADDRESS: {ipData.ipAddress}</li>
-        <li>LOCATION: {ipData.location}</li>
-        <li>TIMEZONE: {ipData.timezone}</li>
-        <li>ISP: {ipData.isp}</li>
-        <li>lat: {ipData.lat}</li>
-        <li>lng: {ipData.lng}</li>
-      </ul>
       {ipData.lat !== undefined && (
         <Mapview
           position={[ipData.lat, ipData.lng]}

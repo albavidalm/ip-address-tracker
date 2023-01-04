@@ -1,6 +1,6 @@
 const SearchInput = ({ handleSubmit, handleInputValue, inputValue }) => {
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="wrapper form" onSubmit={handleSubmit}>
       <input
         name="inputValue"
         type="search"
@@ -10,7 +10,9 @@ const SearchInput = ({ handleSubmit, handleInputValue, inputValue }) => {
         onChange={handleInputValue}
         value={inputValue}
       />
-      <input type="submit" value="Send" />
+      <button className="header__input--button" type="submit" value="Send">
+        <i className="fa-solid fa-angle-right header__input--button-arrow"></i>
+      </button>
     </form>
   );
 };
