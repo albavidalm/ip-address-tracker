@@ -41,8 +41,8 @@ const IptrackerApp = () => {
         handleSubmit={handleSubmit}
         handleInputValue={handleInputValue}
         inputValue={inputValue}
+        ipData={ipData}
       />
-      <InfoBox ipData={ipData} />
 
       {ipData.lat !== undefined && (
         <Mapview

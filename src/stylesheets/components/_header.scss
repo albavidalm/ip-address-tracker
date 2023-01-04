@@ -8,40 +8,13 @@
   }
   &__title {
     color: rgb(255, 255, 255);
+    position: relative;
     font-family: "Rubik", sans-serif;
     font-size: 1.6rem;
     font-weight: 500;
-    margin-bottom: 2.6rem;
-    margin-top: 0;
-    position: relative;
     text-align: center;
+    margin-top: 0;
+    margin-bottom: 2.6rem;
     top: 1rem;
   }
-  &__input {
-    border-radius: 15px 0 0 15px;
-    border-style: none;
-    flex-grow: 2;
-    font-size: 0.9rem;
-    height: 3.4rem;
-    padding-left: 1.3rem;
-    position: relative;
-    width: 100%;
-    &--button {
-      background-color: #000;
-      border-radius: 0 15px 15px 0;
-      border-style: none;
-      height: 3.4rem;
-      position: relative;
-      width: 3.2rem;
-      &-arrow {
-        color: rgb(255, 255, 255);
-      }
-    }
-  }
-}
-
-.form {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
 }
