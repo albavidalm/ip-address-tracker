@@ -1,10 +1,8 @@
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-// import { useState, useEffect } from "react";
+import { MapContainer, TileLayer } from "react-leaflet";
 import Markerposition from "./Markerposition";
 import "leaflet/dist/leaflet.css";
 
 const Mapview = ({ position, lat, lng }) => {
-  //console.log(position);
   return (
     <MapContainer
       className="leafleft-container"

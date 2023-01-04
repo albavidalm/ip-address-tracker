@@ -1,24 +1,16 @@
-const SearchInput = ({ updateInputValue, inputValue }) => {
-  const handleOnChange = (ev) => {
-    updateInputValue(ev.target.value);
-  };
-
-  const handleSubmit = (ev) => {
-    ev.preventDefault();
-    console.log(inputValue);
-  };
+const SearchInput = ({ handleSubmit, handleInputValue, inputValue }) => {
   return (
     <form onSubmit={handleSubmit}>
       <input
-        name="searchIp"
+        name="inputValue"
         type="search"
         placeholder="Search for any IP address or domain"
-        id="searchIp"
+        id="inputValue"
         className="header__input"
-        onChange={handleOnChange}
-        //value={inputValue}
+        onChange={handleInputValue}
+        value={inputValue}
       />
-      <button type="submit" value="Send" />
+      <input type="submit" value="Send" />
     </form>
   );
 };

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import Mapview from "./Mapview";
 import getApiData from "./services/getApiData";
+import Header from "./Header";
+import Mapview from "./Mapview";
 
 const IptrackerApp = () => {
   const [inputValue, setInputValue] = useState("");
@@ -35,21 +36,17 @@ const IptrackerApp = () => {
   };
   return (
     <>
-      <form onSubmit={handleSubmit}>
-        <input
-          name="inputValue"
-          type="search"
-          placeholder="Search for any IP address or domain"
-          id="inputValue"
-          className="header__input"
-          onChange={handleInputValue}
-          value={inputValue}
-        />
-        <input type="submit" value="Send" />
-      </form>
+      <Header
+        handleSubmit={handleSubmit}
+        handleInputValue={handleInputValue}
+        inputValue={inputValue}
+      />
+
       <ul>
-        <li>{ipData.ipAddress}</li>
-        <li>location: {ipData.location}</li>
+        <li>IP ADDRESS: {ipData.ipAddress}</li>
+        <li>LOCATION: {ipData.location}</li>
+        <li>TIMEZONE: {ipData.timezone}</li>
+        <li>ISP: {ipData.isp}</li>
         <li>lat: {ipData.lat}</li>
         <li>lng: {ipData.lng}</li>
       </ul>
