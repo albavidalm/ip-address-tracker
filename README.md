@@ -9,18 +9,18 @@ The layout should resemble the design provided in png as closely as possible (it
 
 ## Table of contents
 
-- [My process](#my-process-🧠)
-  - [Why this project?](#why-this-project-🧐)
-  - [General structure, elements that I have to show](#general-structure-elements-that-i-have-to-show-📌)
-  - [What happens on the web?](#what-happens-on-the-web-⚙️)
-  - [Steps](#steps-📝)
-  - [Built with](#built-with-👷🏻‍♀️)
-  - [What I learned](#what-i-learned-👓)
-- [Further implementations](#further-implementations-🔮)
-- [Links](#links-🔗)
-- [How can you run this project](#how-can-you-run-this-project-🛸)
-- [Author](#author-🖋)
-- [Support](#support-🖤)
+- [My process](#my-process)
+  - [Why this project?](#why-this-project)
+  - [General structure, elements that I have to show](#general-structure-elements-that-i-have-to-show)
+  - [What happens on the web?](#what-happens-on-the-web)
+  - [Steps](#steps)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+- [Further implementations](#further-implementations)
+- [Links](#links)
+- [How can you run this project](#how-can-you-run-this-project)
+- [Author](#author)
+- [Support](#support)
 
 ---
 
