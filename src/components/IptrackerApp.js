@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import getApiData from "./services/getApiData";
 import Header from "./Header";
 import Mapview from "./Mapview";
-import InfoBox from "./InfoBox";
 
 const IptrackerApp = () => {
   const [inputValue, setInputValue] = useState("");
