@@ -1,9 +1,9 @@
 # 📡 IP Tracker
 
 You will be able to visualize on a dynamic map your data from your local IP or one that you enter in the input as well as a domain.<br>
-The layout should resemble the design provided in png as closely as possible (it's only in the mobile layout at the moment)
+The layout should resemble the design provided in png as closely as possible.
 
-![](src/assets/images/designs/mobile-design.jpg)
+![](src/assets/images/layout.png)
 
 ---
 
