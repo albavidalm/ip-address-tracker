@@ -1,6 +1,9 @@
 .header {
   height: 35vh;
   width: 100vw;
+  @include desktop {
+    height: 17.5rem;
+  }
   &__img {
     height: 35vh;
     object-fit: cover;
@@ -8,13 +11,13 @@
   }
   &__title {
     color: $contrast-color;
-    position: relative;
     font-family: $main-font;
     font-size: 1.6rem;
     font-weight: 500;
-    text-align: center;
-    margin-top: 0;
     margin-bottom: 2.6rem;
+    margin-top: 0;
+    position: relative;
+    text-align: center;
     top: 1rem;
   }
 }

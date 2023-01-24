@@ -11,8 +11,12 @@
   display: flex;
   flex-direction: row;
   width: 100%;
+  @include desktop {
+    margin: 0 auto;
+    max-width: 34.688rem;
+  }
   &__input {
-    border-radius: 15px 0 0 15px;
+    border-radius: 0.938rem 0 0 0.938rem;
     border-style: none;
     color: $main-color;
     flex-grow: 2;
@@ -27,9 +31,12 @@
       color: $second-color;
       opacity: 1;
     }
+    @include desktop {
+      margin-bottom: 3rem;
+    }
     &--button {
       background-color: $dark-color;
-      border-radius: 0 15px 15px 0;
+      border-radius: 0 0.938rem 0.938rem 0;
       border-style: none;
       height: 3.4rem;
       position: relative;
@@ -44,24 +51,46 @@
 .info {
   align-items: center;
   background-color: $contrast-color;
-  border-radius: 15px;
+  border-radius: 0.938rem;
   display: flex;
   flex-direction: column;
   height: 18.3rem;
   justify-content: space-evenly;
   text-align: center;
   width: 100%;
-
-  &__title {
-    color: $second-color;
-    font-size: 0.7rem;
-    font-weight: 600;
-    margin: 0.6rem 0;
-    text-transform: uppercase;
+  @include desktop {
+    align-items: flex-start;
+    padding-top: 2rem;
+    flex-direction: row;
+    height: 10rem;
+    justify-content: space-around;
+    max-width: 70rem;
+    text-align: left;
   }
-  &__data {
-    color: $main-color;
-    font-size: 1.3rem;
-    font-weight: 500;
+  &__box {
+    @include desktop {
+      border-right: solid 1px rgb(199, 199, 199);
+      height: 6.25rem;
+      padding: 0 2rem;
+      &:last-child {
+        border-right: none;
+      }
+    }
+    &--title {
+      color: $second-color;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.16rem;
+      margin: 0.6rem 0;
+      text-transform: uppercase;
+    }
+    &--data {
+      color: $main-color;
+      font-size: 1.3rem;
+      font-weight: 500;
+      @include desktop {
+        font-size: 1.5rem;
+      }
+    }
   }
 }
