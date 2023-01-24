@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import getApiData from "./services/getApiData";
 import Header from "./Header";
 import Mapview from "./Mapview";
+import Footer from "./Footer";
 
 const IptrackerApp = () => {
   const [inputValue, setInputValue] = useState("");
@@ -50,6 +51,7 @@ const IptrackerApp = () => {
           lng={ipData.lng}
         />
       )}
+      <Footer />
     </>
   );
 };
