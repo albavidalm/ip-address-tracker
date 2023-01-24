@@ -11,7 +11,7 @@ const InfoBox = ({ ipData }) => {
       </ul>
       <ul>
         <li className="info__title">Timezone</li>
-        <li className="info__data">{ipData.timezone}</li>
+        <li className="info__data">UTC {ipData.timezone}</li>
       </ul>
       <ul>
         <li className="info__title">ISP</li>

@@ -9,6 +9,7 @@ const SearchInput = ({ handleSubmit, handleInputValue, inputValue }) => {
         className="form__input"
         onChange={handleInputValue}
         value={inputValue}
+        data-testid="input"
       />
       <button className="form__input--button" type="submit" value="Send">
         <i className="fa-solid fa-angle-right form__input--button-arrow"></i>
