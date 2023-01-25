@@ -141,7 +141,7 @@ All API requests require the use of a generated API key, so to run the project y
 | :-------- | :------- | :------------------------- |
 | `key`     | `string` | **Required**. Your API key |
 
-Due I needed a list of games and its information related I worked with the next **endpoint**:
+Due I needed the information of the Country and the city I worked with the next **endpoint**:
 
 **"Country + City" API type features**
 
