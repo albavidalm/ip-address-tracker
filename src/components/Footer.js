@@ -1,7 +1,11 @@
+import React from "react";
+
 const Footer = () => {
   return (
     <footer className="footer">
-      <p className="footer__author">Alba Vidal</p>
+      <p className="footer__author" title="author">
+        Alba Vidal
+      </p>
       <a
         className="footer__link"
         href="mailto:albavidalm@gmail.com"
