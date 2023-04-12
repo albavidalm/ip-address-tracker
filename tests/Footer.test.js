@@ -8,4 +8,12 @@ describe("Footer component", () => {
     const author = screen.getByText(/Alba Vidal/i);
     expect(author).toBeInTheDocument();
   });
+
+  test("Linkedin is in the footer", () => {
+    render(<Footer />);
+    const linkedin = screen.getByTitle("Linkedin");
+    expect(linkedin).toBeInTheDocument();
+    expect(linkedin.href).toBe("https://www.linkedin.com/in/albavidalm/");
+    expect(linkedin.target).toBe("_blank");
+  });
 });
